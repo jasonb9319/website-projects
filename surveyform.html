@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+
+ 
+  <body>
+    <title>
+        <h1>
+            Survey form lab project
+        </h1>
+        <p description="survey-form">
+            gathering information for a survey
+        </p>
+
+    </title>
+    <main>
+        <form id="survey-form">
+            <fieldset>
+                <form label for="input-name">
+                    name 
+
+                </form>
+                <input type="text" id="full-name" name="name" placeholder="jason brown" required size="20">
+                <form label for="email">
+                    Email:
+
+                </form>
+                <input type="email" id="email" name="email"
+                placeholder="johnsmith@email.com">
+                <form label for=number>
+                    number
+                </form>
+                <input type="number" id="number" name="number"placeholder="555-5555" required min="7" max="10">
+
+
+
+            </fieldset>
+            <fieldset>
+                <legend>
+                    who do you love?
+                </legend>
+                <input id="bo-diddly" type="radio" name="bo-diddly" value="bo-diddly" />
+                <label for="bo-diddly">bo diddley beat</label>
+                <input id="lonesome-george" type="radio" name="lonesome-george" value="lonesome-george"/>
+                <label for="lonesome-george">lonesome george</label>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    How was your rabbit hole?
+                </legend>
+                <label for="pffft">pffft</label>
+                <select name="pffft" id="pffft">
+                    <option value="great">hell yeah brother</option>
+                    <option value="poor">ewww gross</option>
+                    <option value="ok">better out than in</option>
+
+                </select>
+                <label for="max">maxwell</label>
+                <select name="max" id="max">
+                    <option value="good">He's a good boy</option>
+                    <option value="poor">invalid selection i meant hes a good boy</option>
+                </select>
+            </fieldset>
+            <label for="comments">other comments?</label>
+            <textarea cols="30" rows="10" name="comments" i="comments"></textarea>
+        </form>
+    </main>
+  </body>
+</html>
