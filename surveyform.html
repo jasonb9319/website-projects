@@ -2,13 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Survey Form</title>
-  </head>
-
- 
-  <body>
     <title>
-        <h1>
+        <h1 id="title">
             Survey form lab project
         </h1>
         <p description="survey-form">
@@ -16,23 +11,42 @@
         </p>
 
     </title>
+  </head>
+
+ 
+  <body>
+      <header>
+          <h1 id="title">Survey form project</h1>
+          <p id="description">
+              html forms learning enviroment
+            </p>
+      </header>
+
     <main>
         <form id="survey-form">
             <fieldset>
-                <form label for="input-name">
-                    name 
+                
+                    <label for="input-name" id="name-label">
+                    
+                     name 
+                    </label>
 
-                </form>
-                <input type="text" id="full-name" name="name" placeholder="jason brown" required size="20">
-                <form label for="email">
+                
+                <input type="text" id="name" name="name" placeholder="jason brown" required size="20">
+                
+
+                <label for="email" id="email-label">
                     Email:
-
-                </form>
+                </label>
+                
                 <input type="email" id="email" name="email"
-                placeholder="johnsmith@email.com">
-                <form label for=number>
+                placeholder="johnsmith@email.com" required>
+                
+
+                 <label for=number id="number-label">
                     number
-                </form>
+                </label>
+                
                 <input type="number" id="number" name="number"placeholder="555-5555" required min="7" max="10">
 
 
@@ -42,9 +56,9 @@
                 <legend>
                     who do you love?
                 </legend>
-                <input id="bo-diddly" type="radio" name="bo-diddly" value="bo-diddly" />
+                <input id="bo-diddly" type="radio" name="who-love" value="bo-diddly" />
                 <label for="bo-diddly">bo diddley beat</label>
-                <input id="lonesome-george" type="radio" name="lonesome-george" value="lonesome-george"/>
+                <input id="lonesome-george" type="radio" name="who-love" value="lonesome-george"/>
                 <label for="lonesome-george">lonesome george</label>
             </fieldset>
             <fieldset>
@@ -52,7 +66,7 @@
                     How was your rabbit hole?
                 </legend>
                 <label for="pffft">pffft</label>
-                <select name="pffft" id="pffft">
+                <select name="pffft" id="dropdown">
                     <option value="great">hell yeah brother</option>
                     <option value="poor">ewww gross</option>
                     <option value="ok">better out than in</option>
@@ -64,8 +78,42 @@
                     <option value="poor">invalid selection i meant hes a good boy</option>
                 </select>
             </fieldset>
+            <fieldset>
+            <legend>
+                Why did you choose to stay at our hotel? (Check all that apply)
+            </legend>
+
+            <input type="checkbox" id="ads" name="choice" value="ads" />
+            <label for="ads">Social Media Ads</label>
+
+            <input
+                type="checkbox"
+                id="recommendation"
+                name="choice"
+                value="recommendation"
+            />
+            <label for="recommendation">Personal Recommendation</label>
+            
+            <input type="checkbox" id="location" name="choice" value="location" />
+            <label for="location">Location</label>
+
+            <input
+                checked
+                type="checkbox"
+                id="reputation"
+                name="choice"
+                value="reputation"
+            />
+            <label for="reputation">Reputation</label>
+            
+            <input type="checkbox" id="price" name="choice" value="price" />
+            <label for="price">Price</label>
+        </fieldset>
+
+       
             <label for="comments">other comments?</label>
             <textarea cols="30" rows="10" name="comments" i="comments"></textarea>
+            <button type="submit" id="submit">submit</button>
         </form>
     </main>
   </body>
